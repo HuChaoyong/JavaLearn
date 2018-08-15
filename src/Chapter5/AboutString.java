@@ -18,7 +18,8 @@ package Chapter5;
  *  4. String  匿名实例使用的是共享设计, 即, 在Java中形成一个对象池,在这个对象池中保留多个对象,新实例如果在
  *  对象池中有的话,就直接从对象池里面取出,而不是新建. 如果是通过new 创建的就不会使用共享池的设计
  *
- *
+ *  5. String 字符串的内容不可改变
+ *   每次字符串的重新赋值, 都是 将指向断开,再连接,所以,尽量不要做改变字符串的操作.后面有 StringBuffer 会解决这个问题
  *
  */
 
@@ -37,6 +38,8 @@ public class AboutString {
 
         String sa = "str";
         String sb  ="str";
+        sb = sb.replaceFirst("s", "2333");
         System.out.println(nb.equals(na));
+        System.out.println("sb =" + sb);
     }
 }
