@@ -1,5 +1,6 @@
 package Chapter6;
 
+import java.util.Arrays;
 
 // 基础 Array类
 
@@ -31,9 +32,9 @@ class Array {
 
 // 反转数组类
 
-class ReverseArray extends Array {
+class MyReverseArray extends Array {
 
-    public ReverseArray (int len) {
+    public MyReverseArray (int len) {
         super(len);
     }
 
@@ -47,9 +48,37 @@ class ReverseArray extends Array {
     }
 }
 
+class MySortArray extends Array {
+    public MySortArray(int len) {
+        super(len);
+    }
+
+    public int[] getArray() {
+        int[] arr = super.getArray();
+        Arrays.sort(arr);
+        return arr;
+    }
+}
+
+class ReverseArray extends Array {
+    public ReverseArray(int len) {
+        super(len);
+    }
+
+    public int[] getArray() {
+        int[] t = new int[super.getArray().length];
+        int count = t.length - 1;
+        for (int i = 0; i < t.length; i++) {
+            t[count] = super.getArray()[i];
+            count --;
+        }
+        return t;
+    }
+}
+
 public class ExtendsDemo2 {
     public static void main(String[] args) {
-        ReverseArray a = new ReverseArray(5);
+        MyReverseArray a = new MyReverseArray(5);
         System.out.print(a.add(23) + "\t");
         System.out.print(a.add(21) + "\t");
         System.out.print(a.add(2) + "\t");
@@ -57,6 +86,18 @@ public class ExtendsDemo2 {
         System.out.print(a.add(5) + "\t");
         System.out.print(a.add(6) + "\n");
         ExtendsDemo2.print(a.getArray());
+
+        System.out.println();
+
+        MySortArray s = new MySortArray(5);
+        System.out.print(s.add(23) + "\t");
+        System.out.print(s.add(21) + "\t");
+        System.out.print(s.add(2) + "\t");
+        System.out.print(s.add(42) + "\t");
+        System.out.print(s.add(5) + "\t");
+        System.out.print(s.add(6) + "\t");
+        System.out.println();
+        print(s.getArray());
     }
 
     public static void print(int[] arr) {
