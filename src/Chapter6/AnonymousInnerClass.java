@@ -1,5 +1,7 @@
 package Chapter6;
 
+import static java.lang.System.out;
+
 /**
  * 匿名内部类
  */
@@ -21,6 +23,10 @@ class XX {
 
     public void fun2(AA a) {
         a.printInfo();
+    }
+
+    public void t2() {
+        out.println("hcy");
     }
 }
 
