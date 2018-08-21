@@ -19,3 +19,27 @@ Runnable中定义了一个 run() 函数
 区别:
     继承 Thread类不适合做共享.
     而,实现 Runnable接口适合做共享.
+
+
+
+Q:  Java 程序每次运行时,至少会启动几个线程,
+A:  2个,   一个是 main线程, 一个是垃圾收集线程.
+
+
+线程优先级有3个常亮
+
+Thread.MIN_PRIORITY  => 1
+
+Thread.NORM_PRIORITY => 5
+
+Thread.MAX_PRIORITY => 10
+
+优先级   : 只能反映 线程 的 中或者是 紧急程度 , 不能决定 是否一定先执行!!!
+还得看 CPU爸爸调用哪个
+
+主方法默认的是 NORM_PRIORITY
+
+
+
+多个线程共享同一资源一定要进行同步  synchronized , 以保证资源操作的完整性
+但是!!! 过多的的同步有可能造成死锁.
