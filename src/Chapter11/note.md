@@ -12,5 +12,12 @@
 如果有多种国际化文件使用,优先级是 
 *   Message_zh_CN.class > Message_zh_CN.properties > Message.properties
 
+## System类
+*  获取系统的一些信息
+*   获取系统运行时间
 
+## Date相关
+*   获取各个日期属性的值
+*   Date对象的本地化
+*   日期格式的转换 SimpleDateFormat 类
 
