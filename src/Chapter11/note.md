@@ -21,3 +21,21 @@
 *   Date对象的本地化
 *   日期格式的转换 SimpleDateFormat 类
 
+## BigInteger 和 BigDecimal 类
+* 用来处理大数字和大数字带小数
+
+## Random 类
+* 随机数类
+
+## 对象的克隆
+* 实现 Cloneable接口
+
+## 数组排序和比较
+* Comparable接口
+
+## Regular Expression
+* 正则： Pattern 和 Matcher
+* String类中默认支持 replaceAll()、split() 和 matches()
+
+## Time 和 TimerTask类
+* 完成系统的定时操作 （定时器）
