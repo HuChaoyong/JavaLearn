@@ -10,8 +10,9 @@ public class FileStreamSaveFile {
 
 //        FileStreamSaveFile.readFile("/home/hcy/temp/test.txt");
 //        FileStreamSaveFile.saver("/home/hcy/temp/test.txt", "Hello World!!!", false);
-        FileStreamSaveFile.charReader("/home/hcy/temp/test.txt");
+//        FileStreamSaveFile.charReader("/home/hcy/temp/test.txt");
 
+        cacheCheck();
 
     }
 
@@ -111,5 +112,14 @@ public class FileStreamSaveFile {
         reader.close();
 
         System.out.println("获取文件‘" + path + "'内容： \r\n" + new String(c, 0, len));
+    }
+
+    public static void cacheCheck() throws Exception {
+        File f = new File("/home/hcy/temp/test.txt");
+        Writer out = new FileWriter(f);
+        String str = "Hello LXH . . .";
+        out.write(str);
+        out.flush(); // 强制清空缓冲区内容
+//        out.close();
     }
 }
