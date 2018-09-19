@@ -8,3 +8,10 @@
 
 * 字节流是直接操作文件的
 * 字符流是操作 缓冲区 => 文件
+
+## System对IO的支持
+1. System.out.write()
+2. System.err.println(); // 打印错误
+3. System.in // 输入流
+4. System.setOut(); // 重定向System.out的输出 ???
+5. System.setErr(); // 重定向System.err的输出 ???
