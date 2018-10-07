@@ -15,3 +15,12 @@
 3. System.in // 输入流
 4. System.setOut(); // 重定向System.out的输出 ???
 5. System.setErr(); // 重定向System.err的输出 ???
+
+## 编码
+* GBK/GB2312 ， GBK可以表示简体中文和繁体中文
+* unicode Java中使用这种编码方式，是最标准的一种编码，十六进制表示,
+* UTF  一种不定长的编码，兼容 ISO-8859-1编码,
+
+# 总结
+* IO操作类的关系图
+![avatar](./io-tree.png)
