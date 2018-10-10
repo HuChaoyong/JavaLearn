@@ -1,9 +1,6 @@
 package Chapter13;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
 
 // 集合的输出
 public class CollectionOutput {
@@ -11,7 +8,9 @@ public class CollectionOutput {
 //        demo1();
 //        demo2();
 //        demo3();
-        demo4();
+//        demo4();
+
+        demo5();
     }
 
     /**
@@ -90,5 +89,22 @@ public class CollectionOutput {
         for (String str: all) {
             System.out.println(str + "、");
         }
+    }
+
+    /**
+     *  Enumeration demo， 这是一个旧的接口， 在早期的jdk的开发中会使用到
+     */
+    public static void demo5() {
+        Vector<String> all = new Vector<String>(); // 只能使用 Vector!!!
+        all.add("Hello");
+        all.add("_");
+        all.add("World");
+
+        Enumeration<String> enu = all.elements(); // 实例化
+
+        while (enu.hasMoreElements()) {
+            System.out.println(enu.nextElement() + "、"); // 循环输出
+        }
+
     }
 }

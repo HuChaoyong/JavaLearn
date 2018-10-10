@@ -43,4 +43,13 @@
  * Enumeration    旧接口,和 Iterator类似
  * foreach   遍历
  
+ ## Map  (存储 key => value 形式)
+ * HashMap: 无序存放的，是新的类操作，key不允许重复
+ * HashTable: 无序存放的，是旧的操作类， key不允许重复
+ * TreeMap: 可以排序的Map集合，按集合中的key排序，key不允许重复
+ * WeakHashMap: 弱引用的Map集合，当集合中的某些内容不再使用时清除掉无用的数据，使用gc进行回收
+ * IdentityHashMap: key可以重复的Map集合
+ 
+ 
+ 
  
