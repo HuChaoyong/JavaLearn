@@ -29,7 +29,7 @@
  两者的区别：
  * ArrayList 采用异步处理，性能高， 但属于非线程安全, 只能用 Iterator, foreach输出
  * Vector 采用同步处理，性能较低，但线程安全， 可以用 Iterator，foreach，Enumeration输出
- * <b>一般用ArrayList<b>
+ * --一般用ArrayList--
  
  ## LinkedList 链表操作类
  
@@ -51,5 +51,36 @@
  * IdentityHashMap: key可以重复的Map集合
  
  
+ <table class="table table-bordered table-striped table-condensed">
+     <tr>
+         <td>比较点</td>
+ 	     <td>HashMap</td>
+ 	     <td>Hashtable</td>
+     </tr>
+     <tr>
+         <td>推出时间</td>
+         <td>JDK 1.2后</td>
+         <td>JDK 1.0推出</td>
+     </tr>
+     <tr>
+         <td>性能</td>
+         <td>异步处理，性能高</td>
+         <td>采用同步处理方式，性能低</td>
+     </tr>
+     <tr>
+         <td>线程安全</td>
+         <td>非线程安全</td>
+         <td>线程安全</td>
+     </tr>
+ </table>
  
+ #### WeakHashMap
+ * 从JDK 1.2 版本开始，Java把对象分为四种引用级别，从而使程序能够更加灵活地控制对象的生命周期，这四种由强到弱分别是： 强引用，软引用，弱引用和虚引用.
+ * 强引用： 当内存不足时，JVM宁可出现 OutOfMemeryError错误而停止，也不会回收此对象来释放空间
+ * 软引用： 当内存不足时，会回收这些对象的内存，用来实现内存的高速缓存
+ * 弱引用： 无论内存是否紧张， 垃圾回收器发现立即回收
+ * 虚引用： 和没有引用一样
  
+ ## Map 接口注意事项：
+ * 1 不能直接输出Map中的全部内容， 要分别输出 keys, 和 values (Map很少直接输出，大都作为查询使用)
+ * 2  直接使用非系统类作为key (匿名的就会出问题)
