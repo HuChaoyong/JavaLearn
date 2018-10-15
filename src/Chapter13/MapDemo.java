@@ -1,5 +1,6 @@
 package Chapter13;
 
+import java.sql.SQLSyntaxErrorException;
 import java.util.*;
 
 /**
@@ -15,7 +16,8 @@ public class MapDemo {
 //        demo5();
 //        demo6();
 //        demo7();
-        demo8();
+//        demo8();
+        demo9();
     }
 
     /**
@@ -195,6 +197,25 @@ public class MapDemo {
         System.out.println(map.get(per));
 
         System.out.println(map.get(new Person("张三", 30)));
+    }
+
+    public static void demo9() {
+        SortedMap<String, String> map = null;
+        map = new TreeMap<String, String>();
+        map.put("D、 Jiangker", "http://jiang.com");
+        map.put("C、 玩蛇", "夹心酱");
+        map.put("B、 mldnjava", "走你");
+
+        System.out.print("第一个元素对应的key: " + map.firstKey());
+        System.out.println("；对应的值： " + map.get(map.firstKey()));
+
+        System.out.print("最后一个元素的可以： " + map.lastKey());
+        System.out.println("对应的值： " + map.get(map.lastKey()));
+
+        System.out.println("返回小于指定范围的集合： ");
+        for (Map.Entry<String, String> item: map.headMap("C、 玩蛇").entrySet()) {
+            System.out.println("\t | -" + item.getKey() + " ===> " + item.getValue());
+        }
     }
 
 }

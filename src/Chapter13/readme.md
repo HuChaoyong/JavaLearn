@@ -84,3 +84,22 @@
  ## Map 接口注意事项：
  * 1 不能直接输出Map中的全部内容， 要分别输出 keys, 和 values (Map很少直接输出，大都作为查询使用)
  * 2  直接使用非系统类作为key (匿名的就会出问题)
+ 
+## Identity HashMap 的 key可以重复，只要对象不是同一个
+
+## Collections 包含多个处理集合的方法
+* addAll(coll, obj, obj , ...) 添加多个对象
+* reverse(coll); 反转序列
+* replaceAll(coll, oldValue, newValue)； 用newValue替换oldValue
+* sort(coll); 排序，前提是集合中元素实现了 Comparable接口
+* swap(coll, index1, index2); 交换 index1 和 index2 位置的元素
+
+## Stack 类
+* empty() 测试栈是否为空
+* peek() 查看栈顶
+* pop() 出栈，并删除
+* push(obj) 入栈
+
+## 属性类  Properties
+> ***.properties 这种文件叫做属性文件 ， 表现为 key=value对
+
